@@ -1,0 +1,9 @@
+  service:
+    port: 8080
+  deployment:
+    resources:
+      memory: "512Mi"
+    replicas: 1
+  build:
+    source:
+      uri: "https://github.com/sclorg/nodejs-ex.git"

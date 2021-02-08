@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: {{ .Chart.Name }}
+  annotations:
+    description: Exposes and load balances the application pods
+spec:
+  ports:
+  - name: web
+    port: {{ .Values.service.port }}
+    targetPort: {{.Values.service.port }}
+  selector:
+    name: {{ .Chart.Name }}
